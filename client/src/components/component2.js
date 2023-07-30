@@ -10,7 +10,7 @@ export default function component2({film}) {
     <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={film.image} />
     <Card.Body>
-      <Card.Title> {film.Title} </Card.Title>
+      <Card.Title> {film.title} </Card.Title>
       <Card.Text>
       <Rating initialValue={film.rating} precision={0.5} isHalf={true}/>
       </Card.Text>
