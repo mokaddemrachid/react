@@ -5,16 +5,10 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Component4 from "./component4"
-import { useState } from 'react';
-
-
 
 
 function NavScrollExample({handleChange}) {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -27,7 +21,7 @@ function NavScrollExample({handleChange}) {
             navbarScroll
           >
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link onClick={handleShow}>Add New Movie</Nav.Link>
+            {/* <Nav.Link onClick={handleShow}>Add New Movie</Nav.Link> */}
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/movie">Movie List</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -51,7 +45,6 @@ function NavScrollExample({handleChange}) {
           </Form>
         </Navbar.Collapse>
       </Container>
-      <Component4 show={show} handleClose={handleClose} />
     </Navbar>
   );
 }
